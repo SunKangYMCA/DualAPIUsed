@@ -32,6 +32,7 @@
 		04BC655D2A0EC1040055EAD5 /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BC655C2A0EC1040055EAD5 /* MainTabView.swift */; };
 		04BC65602A0EC1890055EAD5 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BC655F2A0EC1890055EAD5 /* SplashView.swift */; };
 		04BC65622A0EC89E0055EAD5 /* SplashViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BC65612A0EC89E0055EAD5 /* SplashViewModel.swift */; };
+		04CC372E2A16CC09000D780E /* MainDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CC372D2A16CC09000D780E /* MainDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -61,6 +62,7 @@
 		04BC655C2A0EC1040055EAD5 /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
 		04BC655F2A0EC1890055EAD5 /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
 		04BC65612A0EC89E0055EAD5 /* SplashViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewModel.swift; sourceTree = "<group>"; };
+		04CC372D2A16CC09000D780E /* MainDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -219,6 +221,7 @@
 			isa = PBXGroup;
 			children = (
 				04BC65552A0DB67D0055EAD5 /* MainView.swift */,
+				04CC372D2A16CC09000D780E /* MainDetailView.swift */,
 				04BC654F2A0D6ADE0055EAD5 /* MainViewModel.swift */,
 			);
 			path = Main;
@@ -322,6 +325,7 @@
 			files = (
 				04BC65622A0EC89E0055EAD5 /* SplashViewModel.swift in Sources */,
 				04353D262A0FBDF200CA4F6F /* DogsNetworkManager.swift in Sources */,
+				04CC372E2A16CC09000D780E /* MainDetailView.swift in Sources */,
 				04353D1C2A0F1E8800CA4F6F /* DogsView.swift in Sources */,
 				04353D2C2A12725300CA4F6F /* CatsNetworkManager.swift in Sources */,
 				04353D1F2A0F1ED600CA4F6F /* CatsView.swift in Sources */,
