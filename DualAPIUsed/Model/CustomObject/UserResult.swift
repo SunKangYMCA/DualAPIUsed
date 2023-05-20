@@ -7,6 +7,6 @@
 
 import SwiftUI
 
-struct UserResult: Codable {
+struct Result: Codable {
     var results: [User]
 }

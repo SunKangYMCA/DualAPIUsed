@@ -1,5 +1,5 @@
 //
-//  CatViewModel.swift
+//  CatsViewModel.swift
 //  DualAPIUsed
 //
 //  Created by 강성찬 on 2023-05-15.
@@ -12,7 +12,7 @@ class CatsViewModel: ObservableObject {
     @Published var cats: [Cat] = []
     @Published var state: ScreenState = .loading
     
-    private var catsNetworkManager: CatNetworkManager = CatNetworkManager.shared
+    private var catsNetworkManager: CatsNetworkManager = CatsNetworkManager.shared
     
     let columns: [GridItem] = [GridItem(.adaptive(minimum: UIScreen.main.bounds.width * 0.4))]
     
