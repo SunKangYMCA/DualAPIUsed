@@ -35,32 +35,36 @@ struct MainView: View {
     private var MainListRow: some View {
         List {
             ForEach(viewModel.users) { user in
-                HStack {
-                    AsyncImage(url: user.thumbnailPictureURL
-                    ) { image in
-                        image
-                            .resizable()
-                            .scaledToFit()
-                            .frame(width: 48, height: 48)
-                            .clipShape(Circle())
-                    } placeholder: {
-                        Image(systemName: "person")
-                            .resizable()
-                            .scaledToFit()
-                            .frame(width: 48, height: 48)
-                    }
-                    VStack {
-                        HStack {
-                            Text(user.fullName)
-                                .font(.skFont(type: .smallBold))
-                            Spacer()
+                NavigationLink {
+                    MainDetailView(user: user)
+                } label: {
+                    HStack {
+                        AsyncImage(url: user.thumbnailPictureURL
+                        ) { image in
+                            image
+                                .resizable()
+                                .scaledToFit()
+                                .frame(width: 48, height: 48)
+                                .clipShape(Circle())
+                        } placeholder: {
+                            Image(systemName: "person")
+                                .resizable()
+                                .scaledToFit()
+                                .frame(width: 48, height: 48)
                         }
-                        
-                        HStack {
-                            Text(user.email)
-                                .font(.skFont(type: .small))
-                                .foregroundColor(.gray)
-                            Spacer()
+                        VStack {
+                            HStack {
+                                Text(user.fullName)
+                                    .font(.skFont(type: .smallBold))
+                                Spacer()
+                            }
+                            
+                            HStack {
+                                Text(user.email)
+                                    .font(.skFont(type: .small))
+                                    .foregroundColor(.gray)
+                                Spacer()
+                            }
                         }
                     }
                 }
