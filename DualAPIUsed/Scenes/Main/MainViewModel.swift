@@ -11,6 +11,7 @@ class MainViewModel: ObservableObject {
     
     @Published var users: [User] = []
     @Published var state: ScreenState = .loading
+    @Published var currentPage: Int = 0
     
     private let userNetworkManager: UserNetworkManager = UserNetworkManager.shared
     
@@ -18,9 +19,8 @@ class MainViewModel: ObservableObject {
         fetchUsers()
     }
     
-    func fetchUsers() {
-        self.state = .loading
-        userNetworkManager.fetchUsers { fetchedUsers, error in
+    func fetchUsers(pageIndex: Int = 0) {
+        userNetworkManager.fetchUsers(pageIndex: pageIndex) { fetchedUsers, error in
                     DispatchQueue.main.async {
                     if let error = error {
                         print(error.localizedDescription)
@@ -32,7 +32,7 @@ class MainViewModel: ObservableObject {
                         self.state = .error
                         return
                     }
-                    self.users = fetchedUsers
+                        self.users.append(contentsOf: fetchedUsers)
                     self.state = fetchedUsers.isEmpty ? .empty : .loaded
                 }
             }
