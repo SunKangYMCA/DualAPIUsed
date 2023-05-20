@@ -20,11 +20,11 @@ struct MainView: View {
                 MainListRow
             case .empty:
                 EmptyView {
-                    viewModel.fetchUsers()
+                    viewModel.fetchUsers(isReloading: true)
                 }
             case .error:
                 EmptyView {
-                    viewModel.fetchUsers()
+                    viewModel.fetchUsers(isReloading: true)
                 }
             }
         }
@@ -66,6 +66,13 @@ struct MainView: View {
                                 Spacer()
                             }
                         }
+                    }
+                }
+                .onAppear {
+                    if viewModel.users.last == user {
+                        print("##test showing last user")
+                        print("##test fetch nextpage")
+                        viewModel.fetchUsers()
                     }
                 }
             }

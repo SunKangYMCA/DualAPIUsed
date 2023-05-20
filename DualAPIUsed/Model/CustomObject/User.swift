@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct User: Codable, Identifiable {
+struct User: Codable, Identifiable, Equatable {
     var gender: String
     var name: UserName
     var location: UserLocation
@@ -91,13 +91,13 @@ struct User: Codable, Identifiable {
     
 }
 
-struct UserName: Codable {
+struct UserName: Codable, Equatable {
     var title: String
     var first: String
     var last: String
 }
 
-struct UserLocation: Codable {
+struct UserLocation: Codable, Equatable {
     var street: UserStreet
     var city: String
     var state: String
@@ -106,36 +106,36 @@ struct UserLocation: Codable {
     var timezone: UserTimezone
 }
 
-struct UserStreet: Codable {
+struct UserStreet: Codable, Equatable {
     var number: Int
     var name: String
 }
 
-struct UserCoordinates: Codable {
+struct UserCoordinates: Codable, Equatable {
     var latitude: String
     var longitude: String
 }
 
-struct UserTimezone: Codable {
+struct UserTimezone: Codable, Equatable {
     var offset: String
     var description: String
 }
 
-struct UserLogin: Codable {
+struct UserLogin: Codable, Equatable {
     var uuid: String
 }
 
-struct UserDob: Codable {
+struct UserDob: Codable, Equatable {
     var date: String
     var age: Int
 }
 
-struct UserRegistered: Codable {
+struct UserRegistered: Codable, Equatable {
     var date: String
     var age: Int
 }
 
-struct UserPicture: Codable {
+struct UserPicture: Codable, Equatable {
     var large: String
     var medium: String
     var thumbnail: String
