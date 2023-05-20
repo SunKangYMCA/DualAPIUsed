@@ -21,7 +21,7 @@
 		04BC65412A0D27760055EAD5 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BC65402A0D27760055EAD5 /* User.swift */; };
 		04BC65432A0D27810055EAD5 /* Dog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BC65422A0D27810055EAD5 /* Dog.swift */; };
 		04BC65452A0D278A0055EAD5 /* Cat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BC65442A0D278A0055EAD5 /* Cat.swift */; };
-		04BC65472A0D27980055EAD5 /* UserResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BC65462A0D27980055EAD5 /* UserResult.swift */; };
+		04BC65472A0D27980055EAD5 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BC65462A0D27980055EAD5 /* Result.swift */; };
 		04BC65492A0D4DD30055EAD5 /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BC65482A0D4DD30055EAD5 /* Font.swift */; };
 		04BC654C2A0D50240055EAD5 /* CGFloat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BC654B2A0D50240055EAD5 /* CGFloat.swift */; };
 		04BC654E2A0D50F00055EAD5 /* UserNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BC654D2A0D50F00055EAD5 /* UserNetworkManager.swift */; };
@@ -51,7 +51,7 @@
 		04BC65402A0D27760055EAD5 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		04BC65422A0D27810055EAD5 /* Dog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dog.swift; sourceTree = "<group>"; };
 		04BC65442A0D278A0055EAD5 /* Cat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cat.swift; sourceTree = "<group>"; };
-		04BC65462A0D27980055EAD5 /* UserResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserResult.swift; sourceTree = "<group>"; };
+		04BC65462A0D27980055EAD5 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		04BC65482A0D4DD30055EAD5 /* Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
 		04BC654B2A0D50240055EAD5 /* CGFloat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGFloat.swift; sourceTree = "<group>"; };
 		04BC654D2A0D50F00055EAD5 /* UserNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserNetworkManager.swift; sourceTree = "<group>"; };
@@ -202,7 +202,7 @@
 			isa = PBXGroup;
 			children = (
 				04BC65402A0D27760055EAD5 /* User.swift */,
-				04BC65462A0D27980055EAD5 /* UserResult.swift */,
+				04BC65462A0D27980055EAD5 /* Result.swift */,
 				04BC65422A0D27810055EAD5 /* Dog.swift */,
 				04BC65442A0D278A0055EAD5 /* Cat.swift */,
 			);
@@ -333,7 +333,7 @@
 				04BC654E2A0D50F00055EAD5 /* UserNetworkManager.swift in Sources */,
 				04BC654C2A0D50240055EAD5 /* CGFloat.swift in Sources */,
 				04BC655D2A0EC1040055EAD5 /* MainTabView.swift in Sources */,
-				04BC65472A0D27980055EAD5 /* UserResult.swift in Sources */,
+				04BC65472A0D27980055EAD5 /* Result.swift in Sources */,
 				04BC65492A0D4DD30055EAD5 /* Font.swift in Sources */,
 				04BC65582A0DCBA40055EAD5 /* EmptyView.swift in Sources */,
 				04BC65502A0D6ADE0055EAD5 /* MainViewModel.swift in Sources */,
