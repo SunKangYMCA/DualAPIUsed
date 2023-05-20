@@ -21,19 +21,21 @@ class MainViewModel: ObservableObject {
     func fetchUsers() {
         self.state = .loading
         userNetworkManager.fetchUsers { fetchedUsers, error in
-            DispatchQueue.main.asyncAfter(deadline: . now() + 2) {
-                if let error = error {
-                    print(error.localizedDescription)
-                    self.state = .error
+                    DispatchQueue.main.async {
+                    if let error = error {
+                        print(error.localizedDescription)
+                        self.state = .error
+                    }
+                    
+                    guard let fetchedUsers = fetchedUsers else {
+                        print("Not found.")
+                        self.state = .error
+                        return
+                    }
+                    self.users = fetchedUsers
+                    self.state = fetchedUsers.isEmpty ? .empty : .loaded
                 }
-                guard let fetchedUsers = fetchedUsers else {
-                    print("not found.")
-                    self.state = .error
-                    return
-                }
-                self.users = fetchedUsers
-                self.state = fetchedUsers.isEmpty ? .empty : .loaded
             }
         }
     }
-}
+

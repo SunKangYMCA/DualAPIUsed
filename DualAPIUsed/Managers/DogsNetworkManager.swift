@@ -10,7 +10,6 @@ import SwiftUI
 final class DogsNetworkManager {
     static var shared = DogsNetworkManager()
     
-    
     func fetchDogs(completion: @escaping ([Dog]?, Error?) -> Void) {
         var request = URLRequest(url: URL(string: "https://api.thedogapi.com/v1/images/search?format=json&limit=10")!,timeoutInterval: Double.infinity)
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
@@ -19,19 +18,23 @@ final class DogsNetworkManager {
         request.httpMethod = "GET"
         
         let task = URLSession.shared.dataTask(with: request) { data, response, error in
+            
             if let error = error {
                 completion(nil, error)
+                print(error.localizedDescription)
             }
+            
             guard let data = data else {
                 completion(nil, error)
+                print("not found.")
                 return
             }
+            
             do {
                 let decodedData = try JSONDecoder().decode([Dog].self, from: data)
                 completion(decodedData, nil)
             } catch {
                 completion(nil, error)
-                
             }
         }
         task.resume()

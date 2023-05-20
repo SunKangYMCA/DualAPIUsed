@@ -12,7 +12,7 @@ class DogsViewModel: ObservableObject {
     @Published var dogs: [Dog] = []
     @Published var state: ScreenState = .loading
     
-    private var dogsNetworkManager: DogsNetworkManager = DogsNetworkManager.shared
+    private let dogsNetworkManager: DogsNetworkManager = DogsNetworkManager.shared
     
     let columns: [GridItem] = [GridItem(.adaptive(minimum: UIScreen.main.bounds.width * 0.4))]
     
@@ -23,17 +23,20 @@ class DogsViewModel: ObservableObject {
     func fetchDogs() {
         self.state = .loading
         dogsNetworkManager.fetchDogs { fetchedDogs, error in
+            DispatchQueue.main.async {
                 if let error = error {
+                    self.state = .error
                     print(error.localizedDescription)
-                    self.state = .error
                 }
+                
                 guard let fetchedDogs = fetchedDogs else {
-                    print("## no data found ##")
                     self.state = .error
+                    print("Not found data.")
                     return
                 }
                 self.dogs = fetchedDogs
                 self.state = fetchedDogs.isEmpty ? .empty : .loaded
+            }
         }
     }
 }
