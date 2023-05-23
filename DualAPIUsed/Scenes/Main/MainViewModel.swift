@@ -16,11 +16,11 @@ class MainViewModel: ObservableObject {
     private let userNetworkManager: UserNetworkManager = UserNetworkManager.shared
     
     init() {
-        fetchUsers(isReloading: true)
+        fetchUsers(isRefresh: true)
     }
-    
-    func fetchUsers(isReloading: Bool = false) {
-        if isReloading {
+
+    func fetchUsers(isRefresh: Bool = false) {
+        if isRefresh {
             currentPage = 1
             users.removeAll()
         }

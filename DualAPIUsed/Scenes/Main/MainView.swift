@@ -20,11 +20,11 @@ struct MainView: View {
                 MainListRow
             case .empty:
                 EmptyView {
-                    viewModel.fetchUsers(isReloading: true)
+                    viewModel.fetchUsers(isRefresh: true)
                 }
             case .error:
                 EmptyView {
-                    viewModel.fetchUsers(isReloading: true)
+                    viewModel.fetchUsers(isRefresh: true)
                 }
             }
         }
