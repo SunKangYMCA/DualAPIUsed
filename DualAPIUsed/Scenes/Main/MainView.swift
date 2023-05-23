@@ -9,6 +9,7 @@ import SwiftUI
 
 struct MainView: View {
     
+    @State private var searchText: String = ""
     @StateObject var viewModel: MainViewModel = MainViewModel()
     
     var body: some View {
@@ -34,7 +35,7 @@ struct MainView: View {
     
     private var MainListRow: some View {
         List {
-            ForEach(viewModel.users) { user in
+            ForEach(filterUsers) { user in
                 NavigationLink {
                     MainDetailView(user: user)
                 } label: {
@@ -68,6 +69,7 @@ struct MainView: View {
                         }
                     }
                 }
+                .searchable(text: $searchText, prompt: "Who are you looking for")
                 .onAppear {
                     if viewModel.users.last == user {
                         print("##test showing last user")
@@ -75,6 +77,15 @@ struct MainView: View {
                         viewModel.fetchUsers()
                     }
                 }
+            }
+        }
+    }
+    
+    private var filterUsers: [User] {
+        if searchText.isEmpty {
+            return viewModel.users
+        } else {
+            return viewModel.users.filter { $0.fullName.contains(searchText)
             }
         }
     }
