@@ -69,7 +69,6 @@ struct MainView: View {
                         }
                     }
                 }
-                .searchable(text: $searchText, prompt: "Who are you looking for")
                 .onAppear {
                     if viewModel.users.last == user {
                         print("##test showing last user")
@@ -79,13 +78,15 @@ struct MainView: View {
                 }
             }
         }
+        .searchable(text: $searchText, prompt: "Who are you looking for")
     }
     
     private var filterUsers: [User] {
         if searchText.isEmpty {
             return viewModel.users
         } else {
-            return viewModel.users.filter { $0.fullName.contains(searchText)
+            return viewModel.users.filter {
+                $0.fullName.localizedStandardContains(searchText)
             }
         }
     }
