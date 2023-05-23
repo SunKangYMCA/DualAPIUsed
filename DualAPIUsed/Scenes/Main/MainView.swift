@@ -86,7 +86,8 @@ struct MainView: View {
             return viewModel.users
         } else {
             return viewModel.users.filter {
-                $0.fullName.localizedStandardContains(searchText)
+                $0.fullName.localizedCaseInsensitiveContains(searchText)
+                }
             }
         }
     }
