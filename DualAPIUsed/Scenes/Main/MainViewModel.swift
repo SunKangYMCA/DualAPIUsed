@@ -16,29 +16,31 @@ class MainViewModel: ObservableObject {
     private let userNetworkManager: UserNetworkManager = UserNetworkManager.shared
     
     init() {
-        fetchUsers(isReloading: true)
+        fetchUsers(isRefresh: true)
     }
-    
-    func fetchUsers(isReloading: Bool = false) {
-        if isReloading {
+
+    func fetchUsers(isRefresh: Bool = false) {
+        if isRefresh {
             currentPage = 1
             users.removeAll()
         }
         userNetworkManager.fetchUsers(pageIndex: currentPage) { [weak self] fetchedUsers, error in
-            DispatchQueue.main.async {
-                if let error = error {
-                    print(error.localizedDescription)
-                    self?.state = .error
+            DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+                DispatchQueue.main.async {
+                    if let error = error {
+                        print(error.localizedDescription)
+                        self?.state = .error
+                    }
+                    
+                    guard let fetchedUsers = fetchedUsers else {
+                        print("Not found")
+                        self?.state = .error
+                        return
+                    }
+                    self?.currentPage += 1
+                    self?.users.append(contentsOf: fetchedUsers)
+                    self?.state = fetchedUsers.isEmpty ? .empty : .loaded
                 }
-                
-                guard let fetchedUsers = fetchedUsers else {
-                    print("Not found.")
-                    self?.state = .error
-                    return
-                }
-                self?.currentPage += 1
-                self?.users.append(contentsOf: fetchedUsers)
-                self?.state = fetchedUsers.isEmpty ? .empty : .loaded
             }
         }
     }

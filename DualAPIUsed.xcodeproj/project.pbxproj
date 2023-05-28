@@ -33,6 +33,14 @@
 		04BC65602A0EC1890055EAD5 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BC655F2A0EC1890055EAD5 /* SplashView.swift */; };
 		04BC65622A0EC89E0055EAD5 /* SplashViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BC65612A0EC89E0055EAD5 /* SplashViewModel.swift */; };
 		04CC372E2A16CC09000D780E /* MainDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CC372D2A16CC09000D780E /* MainDetailView.swift */; };
+		04DE71C02A214D9D0012F7B4 /* APICallView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DE71BF2A214D9D0012F7B4 /* APICallView.swift */; };
+		04DE71C22A214E4C0012F7B4 /* APICallViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DE71C12A214E4C0012F7B4 /* APICallViewModel.swift */; };
+		04DE71C42A21502F0012F7B4 /* Course.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DE71C32A21502F0012F7B4 /* Course.swift */; };
+		04DE71C92A215ABC0012F7B4 /* APITutorial.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DE71C82A215ABC0012F7B4 /* APITutorial.swift */; };
+		04DE71CB2A215BA20012F7B4 /* Quote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DE71CA2A215BA20012F7B4 /* Quote.swift */; };
+		04DE71CE2A216A870012F7B4 /* TestProjectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DE71CD2A216A870012F7B4 /* TestProjectView.swift */; };
+		04DE71D02A216AB40012F7B4 /* TestUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DE71CF2A216AB40012F7B4 /* TestUser.swift */; };
+		04DE71D22A216F750012F7B4 /* TestProjectViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DE71D12A216F750012F7B4 /* TestProjectViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -63,6 +71,14 @@
 		04BC655F2A0EC1890055EAD5 /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
 		04BC65612A0EC89E0055EAD5 /* SplashViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewModel.swift; sourceTree = "<group>"; };
 		04CC372D2A16CC09000D780E /* MainDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainDetailView.swift; sourceTree = "<group>"; };
+		04DE71BF2A214D9D0012F7B4 /* APICallView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICallView.swift; sourceTree = "<group>"; };
+		04DE71C12A214E4C0012F7B4 /* APICallViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICallViewModel.swift; sourceTree = "<group>"; };
+		04DE71C32A21502F0012F7B4 /* Course.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Course.swift; sourceTree = "<group>"; };
+		04DE71C82A215ABC0012F7B4 /* APITutorial.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APITutorial.swift; sourceTree = "<group>"; };
+		04DE71CA2A215BA20012F7B4 /* Quote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quote.swift; sourceTree = "<group>"; };
+		04DE71CD2A216A870012F7B4 /* TestProjectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestProjectView.swift; sourceTree = "<group>"; };
+		04DE71CF2A216AB40012F7B4 /* TestUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestUser.swift; sourceTree = "<group>"; };
+		04DE71D12A216F750012F7B4 /* TestProjectViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestProjectViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +139,7 @@
 			children = (
 				04BC653E2A0D26280055EAD5 /* Units */,
 				04BC653D2A0D26270055EAD5 /* Managers */,
+				04DE71BE2A214D640012F7B4 /* Practice */,
 				04BC653C2A0D26250055EAD5 /* Scenes */,
 				04BC653B2A0D26230055EAD5 /* UIComponents */,
 				04BC653A2A0D261F0055EAD5 /* Model */,
@@ -205,6 +222,9 @@
 				04BC65462A0D27980055EAD5 /* Result.swift */,
 				04BC65422A0D27810055EAD5 /* Dog.swift */,
 				04BC65442A0D278A0055EAD5 /* Cat.swift */,
+				04DE71C32A21502F0012F7B4 /* Course.swift */,
+				04DE71CA2A215BA20012F7B4 /* Quote.swift */,
+				04DE71CF2A216AB40012F7B4 /* TestUser.swift */,
 			);
 			path = CustomObject;
 			sourceTree = "<group>";
@@ -221,8 +241,8 @@
 			isa = PBXGroup;
 			children = (
 				04BC65552A0DB67D0055EAD5 /* MainView.swift */,
-				04CC372D2A16CC09000D780E /* MainDetailView.swift */,
 				04BC654F2A0D6ADE0055EAD5 /* MainViewModel.swift */,
+				04CC372D2A16CC09000D780E /* MainDetailView.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -251,6 +271,42 @@
 				04BC65612A0EC89E0055EAD5 /* SplashViewModel.swift */,
 			);
 			path = Splash;
+			sourceTree = "<group>";
+		};
+		04DE71BE2A214D640012F7B4 /* Practice */ = {
+			isa = PBXGroup;
+			children = (
+				04DE71CC2A216A620012F7B4 /* TestProject */,
+				04DE71C72A215A760012F7B4 /* APITutorial */,
+				04DE71C62A215A6B0012F7B4 /* APICall */,
+				04DE71BF2A214D9D0012F7B4 /* APICallView.swift */,
+				04DE71C12A214E4C0012F7B4 /* APICallViewModel.swift */,
+			);
+			path = Practice;
+			sourceTree = "<group>";
+		};
+		04DE71C62A215A6B0012F7B4 /* APICall */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = APICall;
+			sourceTree = "<group>";
+		};
+		04DE71C72A215A760012F7B4 /* APITutorial */ = {
+			isa = PBXGroup;
+			children = (
+				04DE71C82A215ABC0012F7B4 /* APITutorial.swift */,
+			);
+			path = APITutorial;
+			sourceTree = "<group>";
+		};
+		04DE71CC2A216A620012F7B4 /* TestProject */ = {
+			isa = PBXGroup;
+			children = (
+				04DE71CD2A216A870012F7B4 /* TestProjectView.swift */,
+				04DE71D12A216F750012F7B4 /* TestProjectViewModel.swift */,
+			);
+			path = TestProject;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -323,23 +379,31 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04DE71C42A21502F0012F7B4 /* Course.swift in Sources */,
 				04BC65622A0EC89E0055EAD5 /* SplashViewModel.swift in Sources */,
 				04353D262A0FBDF200CA4F6F /* DogsNetworkManager.swift in Sources */,
 				04CC372E2A16CC09000D780E /* MainDetailView.swift in Sources */,
+				04DE71C22A214E4C0012F7B4 /* APICallViewModel.swift in Sources */,
 				04353D1C2A0F1E8800CA4F6F /* DogsView.swift in Sources */,
 				04353D2C2A12725300CA4F6F /* CatsNetworkManager.swift in Sources */,
 				04353D1F2A0F1ED600CA4F6F /* CatsView.swift in Sources */,
+				04DE71C02A214D9D0012F7B4 /* APICallView.swift in Sources */,
 				04353D222A0F1F2300CA4F6F /* SettingView.swift in Sources */,
+				04DE71CB2A215BA20012F7B4 /* Quote.swift in Sources */,
 				04BC654E2A0D50F00055EAD5 /* UserNetworkManager.swift in Sources */,
 				04BC654C2A0D50240055EAD5 /* CGFloat.swift in Sources */,
 				04BC655D2A0EC1040055EAD5 /* MainTabView.swift in Sources */,
 				04BC65472A0D27980055EAD5 /* Result.swift in Sources */,
+				04DE71D02A216AB40012F7B4 /* TestUser.swift in Sources */,
 				04BC65492A0D4DD30055EAD5 /* Font.swift in Sources */,
 				04BC65582A0DCBA40055EAD5 /* EmptyView.swift in Sources */,
+				04DE71CE2A216A870012F7B4 /* TestProjectView.swift in Sources */,
 				04BC65502A0D6ADE0055EAD5 /* MainViewModel.swift in Sources */,
 				04BC652D2A0D26060055EAD5 /* DualAPIUsedApp.swift in Sources */,
+				04DE71C92A215ABC0012F7B4 /* APITutorial.swift in Sources */,
 				04BC65452A0D278A0055EAD5 /* Cat.swift in Sources */,
 				04353D2A2A0FCF8800CA4F6F /* DosViewModel.swift in Sources */,
+				04DE71D22A216F750012F7B4 /* TestProjectViewModel.swift in Sources */,
 				04BC65562A0DB67D0055EAD5 /* MainView.swift in Sources */,
 				04BC65542A0DB63B0055EAD5 /* ScreenState.swift in Sources */,
 				04353D2E2A128BB700CA4F6F /* CatsViewModel.swift in Sources */,

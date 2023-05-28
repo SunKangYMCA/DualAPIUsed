@@ -21,10 +21,12 @@ final class CatsNetworkManager {
             
             if let error = error {
                 completion(nil, error)
+                print(error.localizedDescription)
             }
             
             guard let data = data else {
                 completion(nil, error)
+                print("Not found.")
                 return
             }
             
@@ -33,7 +35,7 @@ final class CatsNetworkManager {
                 completion(decodedData, nil)
             } catch {
                 completion(nil, error)
-                print("Not found.")
+                print(error.localizedDescription)
             }
         }
         task.resume()

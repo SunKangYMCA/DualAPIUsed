@@ -29,9 +29,9 @@ extension Font {
         
         var weight: Weight {
             switch self {
-            case .tiny, .small, .normal,. large, .huge:
+            case .tiny, .small, .normal, .large, .huge:
                 return .regular
-            case.tinyBold, .smallBold, .normalBold, .largeBold, .hugeBold:
+            case .tinyBold, .smallBold, .normalBold, .largeBold, .hugeBold:
                 return .bold
             }
         }

@@ -15,9 +15,12 @@ struct EmptyView: View {
         VStack {
             Image(systemName: "lasso")
                 .resizable()
+                .scaledToFit()
                 .frame(width: 64, height: 64)
-            Text("Not found\nPlease try again")
+            
+            Text("Not found\nPlease try agian")
                 .font(.skFont(type: .normalBold))
+                .foregroundColor(Color("skyBlue"))
                 .multilineTextAlignment(.center)
             
             Button {
@@ -25,16 +28,13 @@ struct EmptyView: View {
             } label: {
                 Text("Push")
                     .font(.skFont(type: .normalBold))
-                    .foregroundColor(.white)
+                    .foregroundColor(.secondary)
                     .padding()
                     .background(
                         Color.blue
-                            .opacity(0.4)
                             .cornerRadius(.cornerRadius)
-                    )
+                            .opacity(0.5))
             }
-            .padding(.top, 32)
-
         }
     }
 }

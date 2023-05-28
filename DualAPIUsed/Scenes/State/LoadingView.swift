@@ -14,17 +14,17 @@ struct LoadingView: View {
                 .font(.skFont(type: .smallBold))
                 .foregroundColor(.white)
             ProgressView()
-                .progressViewStyle(CircularProgressViewStyle())
+                .progressViewStyle(CircularProgressViewStyle()
+                )
         }
         .padding()
         .background(
             Color.gray
                 .cornerRadius(.cornerRadius)
-                .opacity(0.4)
+                .opacity(0.5)
         )
     }
 }
-
 struct LoadingView_Previews: PreviewProvider {
     static var previews: some View {
         LoadingView()
