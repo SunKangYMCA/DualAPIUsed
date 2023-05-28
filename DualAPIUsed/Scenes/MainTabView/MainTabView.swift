@@ -42,10 +42,10 @@ struct MainTabView: View {
             .tabItem {
                 Label("Settings", systemImage: "gear.circle")
             }
+            .badge(3)
         }
     }
 }
-
 struct MainTabView_Previews: PreviewProvider {
     static var previews: some View {
         MainTabView()

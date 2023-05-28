@@ -21,12 +21,10 @@ final class DogsNetworkManager {
             
             if let error = error {
                 completion(nil, error)
-                print(error.localizedDescription)
             }
             
             guard let data = data else {
                 completion(nil, error)
-                print("not found.")
                 return
             }
             
@@ -35,6 +33,7 @@ final class DogsNetworkManager {
                 completion(decodedData, nil)
             } catch {
                 completion(nil, error)
+                print(error.localizedDescription)
             }
         }
         task.resume()

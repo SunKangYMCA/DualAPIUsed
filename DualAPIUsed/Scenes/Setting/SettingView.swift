@@ -10,18 +10,18 @@ import SwiftUI
 struct SettingView: View {
     var body: some View {
         VStack {
-     Image(systemName: "gear")
+            Image(systemName: "gear")
                 .resizable()
                 .scaledToFit()
-                .frame(width: 200, height: 200)
-                .foregroundColor(.orange)
-                .opacity(0.6)
-        
-            Text("Settings")
-                .font(.skFont(type: .largeBold))
+                .frame(width: .largeScreenWidth, height: .largeScreenWidth)
                 .foregroundColor(.orange)
                 .opacity(0.6)
                 .padding()
+            
+            Text("Settings")
+                .font(.skFont(type: .hugeBold))
+                .foregroundColor(.orange)
+                .opacity(0.6)
         }
     }
 }

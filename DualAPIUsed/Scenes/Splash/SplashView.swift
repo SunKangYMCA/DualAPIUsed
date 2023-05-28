@@ -13,7 +13,7 @@ struct SplashView: View {
     
     var body: some View {
         ZStack {
-            if viewModel.shouldShowTabView {
+            if viewModel.shouldShowMainTabView {
                 MainTabView()
             } else {
                 Rectangle()
@@ -27,11 +27,10 @@ struct SplashView: View {
                         .font(.skFont(type: .hugeBold))
                         .padding()
                 }
-                
             }
         }
         .onAppear {
-                viewModel.showTabView()
+            viewModel.showMainTabView()
         }
     }
 }

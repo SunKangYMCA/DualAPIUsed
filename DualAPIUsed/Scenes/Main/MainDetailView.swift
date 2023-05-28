@@ -21,9 +21,10 @@ struct MainDetailView: View {
                 AsyncImage(url: user.largePictureURL) { image in
                     image
                         .resizable()
+                        .scaledToFit()
                         .frame(width: .largeScreenWidth, height: .largeScreenWidth)
-                        .padding()
                         .cornerRadius(.cornerRadius)
+                        .padding()
                         .background(
                             Color.white
                                 .cornerRadius(.cornerRadius)
@@ -31,13 +32,14 @@ struct MainDetailView: View {
                 } placeholder: {
                     Image(systemName: "question")
                         .resizable()
+                        .scaledToFit()
                         .frame(width: .largeScreenWidth, height: .largeScreenWidth)
-                        .padding()
                         .cornerRadius(.cornerRadius)
+                        .padding()
                         .background(
                             Color.white
                                 .cornerRadius(.cornerRadius)
-                            )
+                        )
                 }
                 Text(user.fullName)
                     .font(.skFont(type: .largeBold))

@@ -18,7 +18,7 @@ struct MainView: View {
             case .loading:
                 LoadingView()
             case .loaded:
-                MainListRow
+                mainListRow
             case .empty:
                 EmptyView {
                     viewModel.fetchUsers(isRefresh: true)
@@ -33,9 +33,9 @@ struct MainView: View {
         .navigationBarTitleDisplayMode(.inline)
     }
     
-    private var MainListRow: some View {
+    private var mainListRow: some View {
         List {
-            ForEach(filterUsers) { user in
+            ForEach(viewModel.users) { user in
                 NavigationLink {
                     MainDetailView(user: user)
                 } label: {
@@ -45,13 +45,14 @@ struct MainView: View {
                             image
                                 .resizable()
                                 .scaledToFit()
-                                .frame(width: 48, height: 48)
+                                .frame(width: 64, height: 64)
                                 .clipShape(Circle())
                         } placeholder: {
                             Image(systemName: "person")
                                 .resizable()
                                 .scaledToFit()
-                                .frame(width: 48, height: 48)
+                                .frame(width: 64, height: 64)
+                                .clipShape(Circle())
                         }
                         VStack {
                             HStack {
@@ -71,8 +72,8 @@ struct MainView: View {
                 }
                 .onAppear {
                     if viewModel.users.last == user {
-                        print("##test showing last user")
-                        print("##test fetch nextpage")
+                        print("Test Showing Last User")
+                        print("Test Fetch NextPage")
                         viewModel.fetchUsers()
                     }
                 }

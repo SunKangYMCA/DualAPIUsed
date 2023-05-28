@@ -9,12 +9,12 @@ import SwiftUI
 
 class SplashViewModel: ObservableObject {
     
-    @Published var shouldShowTabView: Bool = false
+    @Published var shouldShowMainTabView: Bool = false
     
-    func showTabView() {
+    func showMainTabView() {
         DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
             withAnimation {
-                self.shouldShowTabView = true
+                self.shouldShowMainTabView = true
             }
         }
     }
