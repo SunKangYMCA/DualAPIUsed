@@ -35,7 +35,7 @@ struct MainView: View {
     
     private var mainListRow: some View {
         List {
-            ForEach(viewModel.users) { user in
+            ForEach(filterUsers) { user in
                 NavigationLink {
                     MainDetailView(user: user)
                 } label: {
