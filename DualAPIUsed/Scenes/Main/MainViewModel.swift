@@ -25,7 +25,6 @@ class MainViewModel: ObservableObject {
             users.removeAll()
         }
         userNetworkManager.fetchUsers(pageIndex: currentPage) { [weak self] fetchedUsers, error in
-            DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
                 DispatchQueue.main.async {
                     if let error = error {
                         print(error.localizedDescription)
@@ -40,7 +39,6 @@ class MainViewModel: ObservableObject {
                     self?.currentPage += 1
                     self?.users.append(contentsOf: fetchedUsers)
                     self?.state = fetchedUsers.isEmpty ? .empty : .loaded
-                }
             }
         }
     }
